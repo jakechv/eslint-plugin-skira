@@ -9,7 +9,9 @@ Custom eslint rules created by and used by the Skira development team
 ### How the sql linting works
 
 To get the sql linting rules to work you must tag the template strings containing sql with a sql tag.
-It can either be one that has extra logic or something as simple as `const sql = x => x;`
+It can either be one that has extra logic or something as simple as `const sql = x => x;`.
+
+We provide an sql function by default that you can import, but you can also define your own.
 
 #### Example
 
