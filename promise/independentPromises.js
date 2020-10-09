@@ -46,3 +46,10 @@ const independentPromises = {
 module.exports = {
     independentPromises,
 };
+
+// our question:
+// For each argument in this `await` expression,
+// have we seen the argument as a result of a previous `await` expressions?
+//
+// if yes, we do not warn
+// if no, we warn: these independent calls should be part of a Promise.all call.
