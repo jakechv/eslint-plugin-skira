@@ -53,6 +53,12 @@ const getVariableAssignedTo = node => {
 // what if an incoming argument is an awaited expression that hasn't been evaluated?
 // I suppose we can ignore it, but that isn't very good form; it would be better to be more robust.
 
+// problem!
+// const func = (x, y, z) => z;
+// func(x = 1, y = x) evaluates to 1
+
+// This means that arguments can be dependent on other arguments at the same level
+
 const independentPromises = {
     meta: {
         fixable: false
