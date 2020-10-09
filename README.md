@@ -19,10 +19,9 @@ sql`SELECT * FROM "table_name"`;
 
 ### Rules
 
-1. `skira/sql-matching-double-quotes`: Checks if you have incorrectly formatted double quotes for a postgres query
+Plugins with a check mark are enabled by default with the `plugin:skira/recommended` configuration.
 
-   - OK: select "tableName"."fieldName" from "tableName";
-   - BAD: select tableName"."fieldName" from "tableName"; || select "tableName."fieldName" from "tableName";
-
-2. `skira/sql-formatting`: Errors if your sql template string is not formatted the same way as the npm package sql-formatter
-   - We make use of this rule with eslints auto fixing
+|     | Rule ID                                                                    | Description                                                     |
+| :-- | :------------------------------------------------------------------------- | :-------------------------------------------------------------- |
+| ✅  | [sql/formatting](./docs/rules/sql-formatting.md)                           | Prevent assigning return values of cy calls                     |
+| ✅  | [sql/matching-double-quotes](./docs/rules/sql-matching-double-quotes.md)   | Prevent waiting for arbitrary time periods                      |
